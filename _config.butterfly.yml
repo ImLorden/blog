@@ -45,14 +45,14 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/whitebear.jpeg
+  img: ./pics/whitebear.jpeg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: /img/road.jpg
+index_img: ./pics/road.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: 
@@ -752,7 +752,7 @@ hr_icon:
 subtitle:
   enable: true
   # Typewriter Effect (打字效果)
-  effect: false
+  effect: true
   startDelay: 300 # time before typing starts in milliseconds
   typeSpeed: 150 # type speed in milliseconds
   backSpeed: 50 # backspacing speed in milliseconds
@@ -765,10 +765,10 @@ subtitle:
   # source: 2  調用一句網（簡體） https://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: 3
+  # source: 3
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - 人生如戏啊
+    - 人生如戏
     - Life is a fu**ing movie!
 
 # Loading Animation (加載動畫)

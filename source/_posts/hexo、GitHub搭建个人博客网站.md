@@ -2,7 +2,7 @@
 title: hexo、GitHub搭建个人博客网站
 date: 2024-01-25 13:29:20
 tags:
-cover: /img/tree.jpg
+cover: ./pics/blogPics/tree.jpg
 top_img: #3DA0F2
 description: 如何使用hexo搭建个人博客
 ---
