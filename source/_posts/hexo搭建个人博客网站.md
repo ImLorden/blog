@@ -1,22 +1,23 @@
 ---
-title: hexo、GitHub搭建个人博客网站
-date: 2024-01-25 13:29:20
-tags:
-cover: ./pics/blogPics/tree.jpg
-top_img: #3DA0F2
-description: 如何使用hexo搭建个人博客
+title: hexo搭建个人博客网站
+date: 2024-01-30 18:59:14
+categories: Computer
+tags: Web
+keywords: 'web, hexo'
+description: 使用hexo框架在github上搭建个人博客网站。
+cover: shore.jpg
+# top_img : 'linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)'
 ---
 
 # hexo、GitHub搭建个人博客网站
 
 <p>操作系统：macOS Ventura 13.1</p>
 
-> 可谓是，克服了万难啊！
+> 前言：可谓是，克服了万难啊!
 
----
+![封面](1.png)
 
 ## 第一步：环境配置
-
 - Node.js
 
   - 官网下载pkg文件，安装包安装
@@ -34,29 +35,24 @@ description: 如何使用hexo搭建个人博客
 
 - hexo
 
-  - ```
-    // 安装hexo
+    - 安装hexo
     npm install hexo -g
-    
-    // 建立目标文件夹
     hexo init blog
     
-    // 进入目标文件夹
+    - 进入目标文件夹
     cd blog
     
-    // 安装依赖
+    - 安装依赖
     npm install
     
-    // 打开博客
+    - 打开博客
     hexo serve
-    ```
 
-  - 这里就可以得到本地的网站地址了。
-    - ``Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.``
+    - 这里就可以得到本地的网站地址了。
+    ``Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.``
 
----
 
-## 第二部分：hexo配置到github
+## 第二步：hexo部署到github
 
 ### 1. github准备
 
@@ -86,34 +82,25 @@ description: 如何使用hexo搭建个人博客
     ```
 
   > 有的教程
-  >
   > repo为``https://github.com/GITHUBID/GITHUB.github.io.git``,
-  >
   > branch为``main``
-  >
   > 但我没能成功
 
-### 4. hexo部分
+### 4. 代码备份
 
-- ```
-  // 安装插件
-  npm install --save hexo-deployer-git
+### 5. hexo部分
+
+- 安装插件
+    ``npm install --save hexo-deployer-git``
   
-  // 构建hexo框架
+- 构建hexo框架
+```  
   hexo clean
   hexo g 
   hexo d
   ```
-
-- Hero g是hexo generate
-
-- hexo d是hexo deploy
-
-### 5. 问题排查
-
-> 如果按照以上的操作没有报错的话，恭喜你是一个幸运儿，而我在将hexo部署到github上时遇到了很多的问题
-
-#### hexo d报错：
+  
+### 6.（如果遇到报错）hexo d报错：
 
 1. 超时
    1. fatal: unable to access ``https://github.com/xxx/xxx.github.io``
@@ -127,26 +114,38 @@ description: 如何使用hexo搭建个人博客
 
 **配置了repositoty的SSH密钥**
 
-```
-// 1.输入邮箱，生成密钥，命令的目的是为了让本地机器ssh登录远程机器上的GitHub账户无需输入密码
+```shell
+# 1.输入邮箱，生成密钥，命令的目的是为了让本地机器ssh登录远程机器上的GitHub账户无需输入密码
 ssh-keygen -t rsa -C "youremail@example.com"
 
-// 2. 将SSH key 添加到 ssh-agent
+# 2. 将SSH key 添加到 ssh-agent
 ssh-add ~/.ssh/id_rsa
 
-// 3. 将SSH key 添加到你的GitHub账户
+# 3. 将SSH key 添加到你的GitHub账户
 // 这一步回到github，在repo中新建一个ssh密钥，粘贴d_rsa.pub文件中的内容生成
 
-// 4. 验证key
+# 4. 验证key
 ssh -T git@github.com
 ```
 
-若出现：``You've successfully authenticated, but GitHub does not provide shell access.``则是验证成功了，至此，直接解决了以上问题。
+- 若出现：``You've successfully authenticated, but GitHub does not provide shell access.``则是验证成功了，至此，直接解决了以上问题。
 
-### 6. github查看
+
+### 7. github查看
 
 - 一看code界面是否展示了上传上去的文件夹
 - 二就可以打开``xxxx.github.io``查看自己博客的最初样子了
 
 ---
+## 使用中学习
+### 1. hexo框架结构
+![hexo框架结构](2.png)
+- ``scaffolds``：文件上传的默认模版
+- ``source``：包括博客、图片等等
+
+
+## 参考链接
+[1. markdown中图片的处理](https://blog.csdn.net/2301_77285173/article/details/130189857)
+[2. butterfly配置文档](https://butterfly.js.org/posts/21cfbf15/)
+
 
