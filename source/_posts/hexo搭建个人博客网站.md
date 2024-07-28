@@ -144,7 +144,6 @@ ssh -T git@github.com
 - ``source``：包括博客、图片等等
 
 ## 后续填坑：
-
 时隔三个月重新在新电脑上配置hexo环境，步骤如下：
 - 安装vscode
 - 安装python
@@ -165,6 +164,11 @@ ssh -T git@github.com
         - 如果不行尝试eval `ssh-agent -s`后使用`ssh-add ~/.ssh/id_rsa`
       3. 在github添加新的SSH密钥：将id_rsa.pub里的内容添加到github的设置中
       4. 验证：`ssh -T git@github.com`
+
+
+## 疑难杂症问题解决：
+- git commit失败，无法连接 [解决方案](https://blog.csdn.net/weixin_41010198/article/details/87929622)
+  
       
 ## 参考链接
 [1. markdown中图片的处理](https://blog.csdn.net/2301_77285173/article/details/130189857)
