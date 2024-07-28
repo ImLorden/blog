@@ -98,8 +98,8 @@ cover: shore.jpg
   hexo clean
   hexo g 
   hexo d
-  ```
-  
+```
+
 ### 6.（如果遇到报错）hexo d报错：
 
 1. 超时
@@ -167,11 +167,25 @@ ssh -T git@github.com
 
 
 ## 疑难杂症问题解决：
-- git commit失败，无法连接 [解决方案](https://blog.csdn.net/weixin_41010198/article/details/87929622)
-  
-      
+### git commit失败，无法连接 [解决方案](https://blog.csdn.net/weixin_41010198/article/details/87929622)
+
+### git + vscode + github
+
+- 概述
+  - 首先在vscode中登录github
+  - vscode提供了界面化的git
+  - 在vscode中可以很方便地对github上的代码进行更改的更新
+- 操作
+  - 在explorer部分对代码进行修改
+    - ![](D:\blog\source\_posts\hexo搭建个人博客网站\3.png)
+  - 在source control部分使用git对代码进行管理
+  - 当然，改代码是一部分，使用hexo d部署是另一方面，即使上传了代码，不对代码进行部署，依然无法更新到网站上。
+
+
+
+​    
+
 ## 参考链接
 [1. markdown中图片的处理](https://blog.csdn.net/2301_77285173/article/details/130189857)
 [2. butterfly配置文档](https://butterfly.js.org/posts/21cfbf15/)
-
 
