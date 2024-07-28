@@ -143,6 +143,27 @@ ssh -T git@github.com
 - ``scaffolds``：文件上传的默认模版
 - ``source``：包括博客、图片等等
 
+## 后续填坑：
+时隔三个月重新在新电脑上配置hexo环境，步骤如下：
+- 安装vscode
+- 安装python
+  - 现在这俩东西都可以在安装的时候选择添加到path，省去了很多功夫
+  - 关于安装路径：在安装这一类程序的时候，可以将盘符直接改为D盘即可，将其规范地放到非系统盘里
+- 安装git
+- 将vscode直接与github相连，就可以很快地clone某一个库
+- 安装nodejs、npm、hexo
+  - 在使用hexo的时候遇到了一个问题：`hexo : 无法加载文件 C:hexo.ps1，因为在此系统上禁止运行脚本`
+  - [解决方案](https://www.cnblogs.com/hdlan/p/14452703.html)
+- 加入了一些新的内容，但无法上传（`hexo d`）
+  - 问题原因：`git@github.com: Permission denied (publickey)`
+  - [解决方案](https://blog.csdn.net/qq_40047019/article/details/122898308)
+    - 方案解读：
+      - 确定路径：打开文件夹C:\Users\Administrator\.ssh（Administrator是当前用户名），在空白处点鼠标右键选择“Git Bush Here” ，打开gitbush。
+      1. 生成密钥：`ssh-keygen -t rsa -C "xx@example.com"`， youremail@example.com改为自己的邮箱
+      2. 添加密钥：`ssh-add ~/.ssh/id_rsa`
+        - 如果不行尝试eval `ssh-agent -s`后使用`ssh-add ~/.ssh/id_rsa`
+      3. 在github添加新的SSH密钥：将id_rsa.pub里的内容添加到github的设置中
+      4. 验证：`ssh -T git@github.com`
 
 ## 参考链接
 [1. markdown中图片的处理](https://blog.csdn.net/2301_77285173/article/details/130189857)
