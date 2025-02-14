@@ -235,7 +235,7 @@ aside:
       link: https://github.com/ImLorden
   card_announcement:
     enable: true
-    content: 我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！我的博客，震撼来袭！
+    content: 从2025年情人节开始，网站重新维护。
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all
