@@ -136,3 +136,6 @@ top_img : 'linear-gradient(20deg, #81D8D0, #0095B6, #002FA7, #0F3053)'
 
 > 总结：总体来说，个人目前存储hexo个人博客网站框架的需求，学到这里已经足够了，未来遇到更高级的需求的时候
 肯定还需要继续深入学习，那就是后话了。
+
+## 学习链接
+[1. VScode上使用git](https://www.youtube.com/watch?v=i_23KUAEtUM)
