@@ -139,3 +139,4 @@ top_img : 'linear-gradient(20deg, #81D8D0, #0095B6, #002FA7, #0F3053)'
 
 ## 学习链接
 [1. VScode上使用git](https://www.youtube.com/watch?v=i_23KUAEtUM)
+[2. fatal: Need to specify how to reconcile divergent branches.](https://blog.csdn.net/qq_45677671/article/details/122574671)
