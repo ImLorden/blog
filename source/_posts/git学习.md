@@ -137,6 +137,28 @@ top_img : 'linear-gradient(20deg, #81D8D0, #0095B6, #002FA7, #0F3053)'
 > 总结：总体来说，个人目前存储hexo个人博客网站框架的需求，学到这里已经足够了，未来遇到更高级的需求的时候
 肯定还需要继续深入学习，那就是后话了。
 
+
+---
+## Git 博客流程
+
+1. 克隆 github 文件到本地；
+2. 修改文件
+3. `git pull`
+    - 如果在修改文件期间，远程仓库文件有人修改，就会导致本地和远程仓库不一致的情况，此时 `git pull` 就会报错
+    - 需要使用 `git config pull.rebase false` ，将pull下来的代码与现有改动的代码进行合并
+4. `git status`
+    - 随时查看目前文件夹的 git 情况
+    - 未添加(add)的文件将显示为红色，反之为绿色
+5. `git add .`
+    - 将修改的文件提交代码到本地git缓存区
+    - 如果有不想放入的文件，使用`git add 文件名1 文件名2`
+6. 继续使用`git status`查看文件状态
+7. `git commit -m "提交的消息"`
+    - 推送代码到本地git库
+8. `git push`
+    - 提交本地代码到远程仓库
+
+
 ## 学习链接
 [1. VScode上使用git](https://www.youtube.com/watch?v=i_23KUAEtUM)
 [2. fatal: Need to specify how to reconcile divergent branches.](https://blog.csdn.net/qq_45677671/article/details/122574671)
